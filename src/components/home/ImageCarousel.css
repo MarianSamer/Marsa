@@ -1,0 +1,238 @@
+.carousel-section {
+  background: var(--color-charcoal);
+  padding-bottom: clamp(4rem, 8vw, 6rem);
+}
+
+.carousel-section .section-header h2 {
+  color: var(--color-white);
+}
+
+.carousel {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.carousel__main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel__viewport {
+  position: relative;
+  flex: 1;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-black);
+}
+
+.carousel__slide {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.carousel__viewport:hover .carousel__image {
+  transform: scale(1.03);
+}
+
+.carousel__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.4) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.carousel__arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  transition: all var(--transition);
+}
+
+.carousel__arrow:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(196, 165, 116, 0.1);
+}
+
+.carousel__fullscreen-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+  color: var(--color-white);
+  transition: all var(--transition);
+}
+
+.carousel__fullscreen-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-black);
+}
+
+.carousel__counter {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-white);
+  letter-spacing: 0.1em;
+}
+
+.carousel__counter-sep {
+  margin: 0 0.25rem;
+  color: var(--color-accent);
+}
+
+.carousel__thumbs {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.carousel__thumb {
+  flex-shrink: 0;
+  width: 100px;
+  height: 65px;
+  overflow: hidden;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.carousel__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.carousel__thumb:hover {
+  opacity: 0.8;
+}
+
+.carousel__thumb:hover img {
+  transform: scale(1.1);
+}
+
+.carousel__thumb--active {
+  opacity: 1;
+  border-color: var(--color-accent);
+}
+
+/* Lightbox */
+.carousel__lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+}
+
+.carousel__lightbox-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.carousel__lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: var(--color-white);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition);
+}
+
+.carousel__lightbox-close:hover {
+  color: var(--color-accent);
+}
+
+.carousel__lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition);
+}
+
+.carousel__lightbox-arrow:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.carousel__lightbox-arrow--prev {
+  left: 1.5rem;
+}
+
+.carousel__lightbox-arrow--next {
+  right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .carousel__arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel__thumb {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel__main {
+    flex-direction: column;
+  }
+
+  .carousel__arrow--prev,
+  .carousel__arrow--next {
+    display: none;
+  }
+
+  .carousel__viewport {
+    width: 100%;
+  }
+}

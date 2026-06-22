@@ -1,0 +1,31 @@
+.social-icons {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-icons__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  transition: all var(--transition);
+}
+
+.social-icons__link:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.social-icons--dark .social-icons__link {
+  border-color: rgba(10, 10, 10, 0.15);
+  color: var(--color-gray);
+}
+
+.social-icons--dark .social-icons__link:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}

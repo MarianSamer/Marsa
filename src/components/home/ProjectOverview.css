@@ -1,0 +1,78 @@
+.overview {
+  background: var(--color-white);
+}
+
+.overview__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.overview__description {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.9;
+  margin-bottom: 2rem;
+}
+
+.overview__concept {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-accent);
+}
+
+.overview__concept p {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-style: italic;
+  color: var(--color-charcoal);
+  line-height: 1.7;
+}
+
+.overview__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.overview__card {
+  padding: 2rem 1.5rem;
+  background: var(--color-white);
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  transition: all var(--transition);
+}
+
+.overview__card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+
+.overview__card-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin-bottom: 0.75rem;
+}
+
+.overview__card-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  color: var(--color-black);
+}
+
+@media (max-width: 900px) {
+  .overview__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview__cards {
+    grid-template-columns: 1fr;
+  }
+}
