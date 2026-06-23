@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { PROJECT } from '../../data/content';
 import { useParallax } from '../../hooks/useScroll';
 import { useInViewOnce } from '../../hooks/useScroll';
 import './CallToAction.css';
@@ -15,7 +16,7 @@ export default function CallToAction() {
     <section className="cta" ref={viewRef}>
       <div className="cta__bg" ref={parallaxRef}>
         <motion.div style={{ transform: `translateY(${offset}px) scale(1.1)` }}>
-          <img src={'/images/1.jpeg'} alt="Architectural render"/>
+          <img src={PROJECT.ctaImage} alt="Architectural render" />
         </motion.div>
       </div>
 

@@ -1,3 +1,5 @@
+import { ASSETS } from '../assets';
+
 export const ARCHITECT_NAME = 'Marian Samer';
 
 export const PROJECT = {
@@ -7,9 +9,9 @@ export const PROJECT = {
   'Inspired by the harbor where ships slow, anchor, and rest. Resort becomes a destination for people seeking pause, and reconnection with nature.',
   concept:
     'Allowing visitors to reconnect with physical and emotional well-being. By integrating Biophilic design principles.',
-  heroImage: '/images/hero.jpg.jpeg',
-  ctaImage:
-    'https://images.unsplash.com/photo-1511818966892-d7d671c44f52?w=1920&q=80',
+  heroImage: ASSETS.hero,
+  ctaImage: ASSETS.img1,
+  video: ASSETS.video,
   stats: [
     { label: 'Site Area', value: '80,400 m²' },
     { label: 'Building Type', value: 'Wellness Resort' },
@@ -18,27 +20,27 @@ export const PROJECT = {
   ],
   gallery: [
     {
-      src: '/images/5.jpeg',
+      src: ASSETS.img5,
       alt: 'Kayaking',
     },
-    
+
     {
-      src: '/images/4.jpeg',
+      src: ASSETS.img4,
       alt: 'Stability board exercise',
     },
 
     {
-      src: '/images/2.jpeg',
+      src: ASSETS.img2,
       alt: 'Stepped Seating',
     },
 
     {
-      src: '/images/3.jpeg',
+      src: ASSETS.img3,
       alt: 'Beach CloseUp',
     },
-    
+
     {
-      src: '/images/9.jpeg',
+      src: ASSETS.img9,
       alt: 'Bird eye view',
     },
   ],
@@ -46,22 +48,22 @@ export const PROJECT = {
     {
       stage: 'Aquatic Activities',
       description: 'Aqua fitness, kayaking, Diving, and more',
-      image: '/images/6.jpeg',
+      image: ASSETS.img6,
       imageAlt: 'Bird eye view',
     },
     {
       stage: 'Outdoor Activities',
       description: 'Workshops, Indoor pool, Pilates, and more',
-      image: '/images/7.jpeg',
+      image: ASSETS.img7,
       imageAlt: 'Stepped Seating',
     },
     {
       stage: 'Relax and Treatments',
       description: 'Yoga, Spa, Massage, and more',
-      image: '/images/8.jpeg',
+      image: ASSETS.img8,
       imageAlt: 'Beach CloseUp',
     },
-   
+
   ],
 };
 

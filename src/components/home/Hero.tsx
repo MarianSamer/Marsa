@@ -16,7 +16,7 @@ export default function Hero() {
         className="hero__bg"
         style={{ transform: `translateY(${offset}px) scale(1.1)` }}
       >
-        <img src={'/images/hero.jpeg'} alt={PROJECT.title}/>
+        <img src={PROJECT.heroImage} alt={PROJECT.title} />
       </motion.div>
 
       <div className="overlay-gradient" />

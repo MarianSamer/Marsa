@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { PROJECT } from '../../data/content';
 import { fadeInUp } from '../../utils/animations';
 import { useInViewOnce } from '../../hooks/useScroll';
 import './VideoSection.css';
@@ -18,7 +19,7 @@ export default function VideoSection() {
         >
           <video
             className="video-section__player"
-            src="/images/video.mp4"
+            src={PROJECT.video}
             controls
             playsInline
             preload="metadata"
