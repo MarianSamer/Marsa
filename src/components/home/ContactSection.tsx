@@ -1,40 +1,15 @@
-import { useState, FormEvent } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ABOUT } from '../../data/content';
 import { fadeInUp, staggerContainer, staggerItem } from '../../utils/animations';
 import { useInViewOnce } from '../../hooks/useScroll';
 import './ContactSection.css';
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
 
-interface FormErrors {
-  name?: string;
-  email?: string;
-  message?: string;
-}
+
 
 export default function ContactSection() {
   const { ref, isInView } = useInViewOnce();
-  const [form, setForm] = useState<FormData>({ name: '', email: '', message: '' });
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [submitted, setSubmitted] = useState(false);
-
-  const validate = (): boolean => {
-    const newErrors: FormErrors = {};
-    if (!form.name.trim()) newErrors.name = 'Name is required';
-    if (!form.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      newErrors.email = 'Please enter a valid email';
-    }
-    if (!form.message.trim()) newErrors.message = 'Message is required';
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  
 
   return (
     <section className="section contact" id="contact" ref={ref}>
