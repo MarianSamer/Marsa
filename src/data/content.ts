@@ -104,7 +104,7 @@ export const ABOUT = {
   contact: {
     fullName: 'Marian Samer',
     email: 'marian.samerattia@gmail.com',
-    phone: '+20 01285334851',
+    phone: '+20 1285334239',
     linkedin: 'https://www.linkedin.com/in/marian-samer-978465219/',
   },
 };
