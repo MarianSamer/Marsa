@@ -16,7 +16,7 @@ export default function Footer({ variant = 'home' }: FooterProps) {
         <div className="footer__top">
           <div className="footer__brand">
             <h3 className="footer__name">{ARCHITECT_NAME}</h3>
-            <p className="footer__tagline">Architecture & Urban Design</p>
+            <p className="footer__tagline">Housing, Architecture & Urban Development</p>
           </div>
 
           {variant === 'about' && (

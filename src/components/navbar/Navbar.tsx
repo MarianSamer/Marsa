@@ -6,8 +6,7 @@ import { useScrollPosition } from '../../hooks/useScroll';
 import './Navbar.css';
 
 const NAV_ITEMS = [
-  { label: 'Home', path: '/' },
-  { label: 'About Me', path: '/about' },
+  { label: 'Home Page', path: '/' },
 ];
 
 export default function Navbar() {

@@ -1,0 +1,13 @@
+.video-section__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-section__player {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  border-radius: 4px;
+  background: var(--color-black);
+}

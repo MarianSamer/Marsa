@@ -16,8 +16,8 @@ export default function DesignProcess() {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
         >
-          <span className="label">Design Process</span>
-          <h2>From Research to Resolution</h2>
+          <span className="label"> Activities </span>
+          <h2>From Active to Stillness</h2>
           <div className="divider" />
         </motion.div>
 
@@ -31,28 +31,49 @@ export default function DesignProcess() {
             />
           </div>
 
-          {PROJECT.timeline.map((item, i) => (
-            <motion.div
-              key={item.stage}
-              className={`process__item ${i % 2 === 0 ? 'process__item--left' : 'process__item--right'}`}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <div className="process__dot">
-                <motion.span
-                  initial={{ scale: 0 }}
-                  animate={isInView ? { scale: 1 } : {}}
-                  transition={{ duration: 0.4, delay: 0.5 + i * 0.15, type: 'spring' }}
-                />
-              </div>
+          {PROJECT.timeline.map((item, i) => {
+            const textOnLeft = i % 2 === 0;
+
+            const card = (
               <div className="process__card">
                 <span className="process__number">{String(i + 1).padStart(2, '0')}</span>
                 <h3>{item.stage}</h3>
                 <p>{item.description}</p>
               </div>
-            </motion.div>
-          ))}
+            );
+
+            const image = (
+              <div className="process__image">
+                <img src={item.image} alt={item.imageAlt} />
+              </div>
+            );
+
+            return (
+              <motion.div
+                key={item.stage}
+                className="process__item"
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.4 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <div className={`process__side process__side--left ${textOnLeft ? 'process__side--text' : 'process__side--image'}`}>
+                  {textOnLeft ? card : image}
+                </div>
+
+                <div className="process__dot">
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    animate={isInView ? { scale: 1 } : {}}
+                    transition={{ duration: 0.4, delay: 0.5 + i * 0.15, type: 'spring' }}
+                  />
+                </div>
+
+                <div className={`process__side process__side--right ${textOnLeft ? 'process__side--image' : 'process__side--text'}`}>
+                  {textOnLeft ? image : card}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

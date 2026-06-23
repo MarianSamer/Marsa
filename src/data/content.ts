@@ -11,39 +11,57 @@ export const PROJECT = {
   ctaImage:
     'https://images.unsplash.com/photo-1511818966892-d7d671c44f52?w=1920&q=80',
   stats: [
-    { label: 'Site Area', value: '4,200 m²' },
-    { label: 'Building Type', value: 'Cultural Pavilion' },
+    { label: 'Site Area', value: '80,400 m²' },
+    { label: 'Building Type', value: 'Wellness Resort' },
     { label: 'Location', value: 'New Suez, Egypt' },
     { label: 'Year', value: '2026' },
   ],
   gallery: [
     {
-      src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-      alt: 'Exterior perspective render',
+      src: '/images/5.jpeg',
+      alt: 'Kayaking',
     },
+    
     {
-      src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
-      alt: 'Interior spatial view',
+      src: '/images/4.jpeg',
+      alt: 'Stability board exercise',
     },
+
     {
-      src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80',
-      alt: 'Aerial site context',
+      src: '/images/2.jpeg',
+      alt: 'Stepped Seating',
     },
+
     {
-      src: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1200&q=80',
-      alt: 'Material detail study',
+      src: '/images/3.jpeg',
+      alt: 'Beach CloseUp',
     },
+    
     {
-      src: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
-      alt: 'Evening illumination render',
+      src: '/images/9.jpeg',
+      alt: 'Bird eye view',
     },
   ],
   timeline: [
-    { stage: 'Research', description: 'Site analysis, climate studies, and contextual mapping' },
-    { stage: 'Concept', description: 'Initial spatial narratives and programmatic diagrams' },
-    { stage: 'Massing', description: 'Volume studies and solar orientation optimization' },
-    { stage: 'Development', description: 'Structural systems and material specification' },
-    { stage: 'Final Design', description: 'Detailed resolution and presentation renders' },
+    {
+      stage: 'Aquatic Activities',
+      description: 'Aqua fitness, kayaking, Diving, and more',
+      image: '/images/6.jpeg',
+      imageAlt: 'Bird eye view',
+    },
+    {
+      stage: 'Outdoor Activities',
+      description: 'Workshops, Indoor pool, Pilates, and more',
+      image: '/images/7.jpeg',
+      imageAlt: 'Stepped Seating',
+    },
+    {
+      stage: 'Relax and Treatments',
+      description: 'Yoga, Spa, Massage, and more',
+      image: '/images/8.jpeg',
+      imageAlt: 'Beach CloseUp',
+    },
+   
   ],
 };
 
@@ -82,16 +100,13 @@ export const ABOUT = {
     { name: 'Enscape', level: 80 },
   ],
   contact: {
-    fullName: 'Elena Vasquez',
-    email: 'elena.vasquez@archmail.com',
-    phone: '+34 612 345 678',
-    linkedin: 'https://linkedin.com/in/elenavasquez',
-    behance: 'https://behance.net/elenavasquez',
+    fullName: 'Marian Samer',
+    email: 'marian.samerattia@gmail.com',
+    phone: '+20 01285334851',
+    linkedin: 'https://www.linkedin.com/in/marian-samer-978465219/',
   },
 };
 
 export const SOCIAL_LINKS = [
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/elenavasquez', icon: 'linkedin' },
-  { name: 'Behance', url: 'https://behance.net/elenavasquez', icon: 'behance' },
-  { name: 'Instagram', url: 'https://instagram.com/elenavasquez.arch', icon: 'instagram' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/marian-samer-978465219/', icon: 'linkedin' },
 ];

@@ -1,0 +1,60 @@
+.contact {
+  background: var(--color-white);
+}
+
+
+.contact .section-header h2 {
+  color: var(--color-charcoal);
+}
+
+.contact__grid {
+  display: flex;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  justify-content: center;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.contact__info-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.35rem;
+}
+
+.contact__info-item p,
+.contact__info-item a {
+  font-size: 1rem;
+  color: var(--color-charcoal);
+  transition: color var(--transition);
+}
+
+.contact__info-item a:hover {
+  color: var(--color-accent);
+}
+
+.contact__info-item-container{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.contact__download {
+  margin-top: 0.5rem;
+}
+
+
+@media (max-width: 768px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
